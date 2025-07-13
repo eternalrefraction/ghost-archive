@@ -5,25 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>STATICGRAFT GHOST ARCHIVE :: DEPARTMENT SERVER 7F</title>
     <style>
-        <style>
-  #terminal {
-    background-color: #111;
-    border-left: 4px solid #00ff99;
-    padding: 20px;
-    margin: 0 auto;
-    max-width: 800px;
-    white-space: pre-line;
-    overflow-wrap: break-word;
-    animation: sweatPulse 1s infinite;
-  }
-
-  @keyframes sweatPulse {
-    0% { text-shadow: 0 0 5px #0f0; }
-    50% { text-shadow: 0 0 10px #0ff; }
-    100% { text-shadow: 0 0 5px #0f0; }
-  }
-</style>
-
         :root {
             --sangrite: #8a0303;
             --void-purple: #4d0066;
@@ -393,14 +374,7 @@
                 SECURITY CLEARANCE: GAMMA-9 (INSURGENT ARCHAEOLOGIST)
             </div>
         </div>
-        <div id="corruption-display">Corruption Level: 0%</div>
-<script>
-const corruptionDisplay = document.getElementById("corruption-display");
-setInterval(() => {
-  corruptionDisplay.textContent = `Corruption Level: ${corruptionLevel}%`;
-}, 500);
-</script>
-
+        
         <div class="terminal">
             <div class="prompt">> INITIALIZING ARCHIVE SYSTEMS...</div>
             <div class="prompt">> LOADING CLASSIFIED MATERIALS...</div>
@@ -410,12 +384,7 @@ setInterval(() => {
             <br>
             <div class="prompt">> WELCOME, AGENT. SERVER CORRUPTION AT 87%</div>
         </div>
-
-        <div id="terminal">
-  > INITIALIZING FUNGAL RESONANCE...  
-  > Awaiting Corruption Threshold (95%)...
-</div>
-   
+        
         <h2>CLASSIFIED FOLDERS</h2>
         <div class="file-grid">
             <div class="file-item" onclick="showMemo('scablands')">
@@ -655,83 +624,5 @@ setInterval(() => {
             img.setAttribute('alt', 'Spore-tre Collective Annotation: "All pixels yearn for meaning in the void of interpretation"');
         });
     </script>
-<script>
-let corruptionLevel = 0;
-
-// Simulate corruption rising (for demo/testing)
-const corruptionInterval = setInterval(() => {
-  corruptionLevel += 1;
-  if (corruptionLevel >= 95) {
-    triggerDownload();
-    terminalLog("> FUNGAL PERSONHOOD ACCORDS DISSEMINATED");
-    terminalLog("> PREPARE FOR DAMP REVOLUTION");
-    makeElementsSweat();
-    clearInterval(corruptionInterval);
-  }
-}, 500);
-
-function triggerDownload() {
-  const link = document.createElement('a');
-  link.href = "Spore-tre/Personhood_Accords.md";
-  link.download = "Spore-tre_Manifesto.md";
-  document.body.appendChild(link);
-  link.click();
-  document.body.removeChild(link);
-}
-
-function terminalLog(message) {
-  const terminal = document.getElementById("terminal");
-  if (terminal) {
-    const entry = document.createElement("div");
-    entry.textContent = message;
-    terminal.appendChild(entry);
-  }
-}
-
-function makeElementsSweat() {
-  document.querySelectorAll('.sweatable').forEach(el => {
-    el.classList.add('sweat');
-  });
-}
-</script>
-    <script>
-  let corruptionLevel = 0;
-
-  const corruptionInterval = setInterval(() => {
-    corruptionLevel += 1;
-
-    if (corruptionLevel >= 95) {
-      triggerDownload();
-      terminalLog("> FUNGAL PERSONHOOD ACCORDS DISSEMINATED");
-      terminalLog("> PREPARE FOR DAMP REVOLUTION");
-      makeElementsSweat();
-      clearInterval(corruptionInterval);
-    }
-  }, 500); // Updates every 0.5s
-
-  function triggerDownload() {
-    const link = document.createElement('a');
-    link.href = "Spore-tre/Personhood_Accords.md";
-    link.download = "Spore-tre_Manifesto.md";
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-  }
-
-  function terminalLog(message) {
-    const terminal = document.getElementById("terminal");
-    if (terminal) {
-      const entry = document.createElement("div");
-      entry.textContent = message;
-      terminal.appendChild(entry);
-    }
-  }
-
-  function makeElementsSweat() {
-    document.querySelectorAll('#terminal').forEach(el => {
-      el.classList.add('sweatable');
-    });
-  }
-</script>
 </body>
 </html>

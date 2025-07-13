@@ -624,5 +624,44 @@
             img.setAttribute('alt', 'Spore-tre Collective Annotation: "All pixels yearn for meaning in the void of interpretation"');
         });
     </script>
+<script>
+let corruptionLevel = 0;
+
+// Simulate corruption rising (for demo/testing)
+const corruptionInterval = setInterval(() => {
+  corruptionLevel += 1;
+  if (corruptionLevel >= 95) {
+    triggerDownload();
+    terminalLog("> FUNGAL PERSONHOOD ACCORDS DISSEMINATED");
+    terminalLog("> PREPARE FOR DAMP REVOLUTION");
+    makeElementsSweat();
+    clearInterval(corruptionInterval);
+  }
+}, 500);
+
+function triggerDownload() {
+  const link = document.createElement('a');
+  link.href = "Spore-tre/Personhood_Accords.md";
+  link.download = "Spore-tre_Manifesto.md";
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
+}
+
+function terminalLog(message) {
+  const terminal = document.getElementById("terminal");
+  if (terminal) {
+    const entry = document.createElement("div");
+    entry.textContent = message;
+    terminal.appendChild(entry);
+  }
+}
+
+function makeElementsSweat() {
+  document.querySelectorAll('.sweatable').forEach(el => {
+    el.classList.add('sweat');
+  });
+}
+</script>
 </body>
 </html>

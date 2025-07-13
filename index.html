@@ -393,7 +393,14 @@
                 SECURITY CLEARANCE: GAMMA-9 (INSURGENT ARCHAEOLOGIST)
             </div>
         </div>
-        
+        <div id="corruption-display">Corruption Level: 0%</div>
+<script>
+const corruptionDisplay = document.getElementById("corruption-display");
+setInterval(() => {
+  corruptionDisplay.textContent = `Corruption Level: ${corruptionLevel}%`;
+}, 500);
+</script>
+
         <div class="terminal">
             <div class="prompt">> INITIALIZING ARCHIVE SYSTEMS...</div>
             <div class="prompt">> LOADING CLASSIFIED MATERIALS...</div>
